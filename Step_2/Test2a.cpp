@@ -1,7 +1,6 @@
 #include <iostream>
 #include "Model.h"
 #include "Car.h"
-
 using namespace carconfig;
 
 // Tests de base de la classe Car (sans les options)

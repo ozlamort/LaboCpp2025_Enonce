@@ -3,6 +3,7 @@
 
 #include <Option.h>
 
+/******************constructeur***********************/
 
 Option::Opition()
 {
@@ -62,3 +63,4 @@ void Option::setCode(const char*c)
 	code=new char[strlen(c)+1];  //+1 pour le \0
 	strcpy(code,c);
 }
+

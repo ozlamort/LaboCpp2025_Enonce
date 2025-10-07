@@ -1,8 +1,9 @@
 /********Car.cpp***********/
 
 
-#include <.car.h>
+#include <car.h>
 
+/**************constructeur******************/
 
 Car::Car()
 {
@@ -55,4 +56,14 @@ void Car::setName(const char*n)
 	}
 	name=new char[strlen(n)+1]; // +1 pour le \0
 	strcpy(name,n);
+}
+
+
+
+/*********************************getters***********************************/
+
+
+const char* Car::getName() const
+{
+	return name;
 }
