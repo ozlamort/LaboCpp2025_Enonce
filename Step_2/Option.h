@@ -22,6 +22,7 @@ class Option
 	public:
 		Option(); //constructeur
 		Option(const char*,const char*,float p);
+		Option(const Option& o);
 		~Option();  //destructeur
 
 		void setCode(const char*c);

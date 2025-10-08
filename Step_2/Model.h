@@ -26,8 +26,8 @@ class Model
 
   public:  // en dehors de la classe, ça doit être déclaré en public
     Model();  // Constructeur
-    Model(const char*,int p,Engine e,float bp);
-    Model(const Model &m);
+    Model(const char*,int p,Engine e,float bp);  //constructeur d'initialisation
+    Model(const Model &m);  //constructeur de copie
     ~Model();   // Destructeur
 
     void setName(const char*n);

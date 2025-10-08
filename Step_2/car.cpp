@@ -1,7 +1,7 @@
 /********Car.cpp***********/
 
 
-#include <car.h>
+#include "car.h"
 
 /**************constructeur******************/
 
@@ -30,7 +30,7 @@ Car::Car(const Car &v)
 
 Car::~Car()
 {
-	cout<<"Car: constructeur"<<endl;
+	cout<<"Car: destructeur"<<endl;
 	if(name)
 	{
 		delete[] name; //suppression de 'name' car tableau de caractère []
@@ -58,6 +58,11 @@ void Car::setName(const char*n)
 	strcpy(name,n);
 }
 
+void Model::setModel(Model m)
+{
+	Model=m;
+}
+
 
 
 /*********************************getters***********************************/
@@ -67,3 +72,24 @@ const char* Car::getName() const
 {
 	return name;
 }
+
+Model Car::getModel()const
+{
+	return model;
+}
+
+/*******************************Méthode d'instance***************************/
+
+
+void Car::display()const
+{
+	cout::"Car: ";
+	if(name)
+	{
+		cout<<name;
+	}
+	else
+	{
+		cout<<"pas de nom";
+	}
+};

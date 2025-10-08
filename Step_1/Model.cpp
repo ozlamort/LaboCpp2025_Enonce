@@ -14,9 +14,6 @@ Model::Model()
   setPower(0);
   setEngine(Engine::Petrol);
   setBasePrice(0.0);
-  /*power=0;
-  engine=Engine::Petrol;
-  basePrice=0.0;*/
 };
 
 

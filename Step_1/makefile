@@ -1,9 +1,5 @@
-Test1:	Test1.cpp	Model.o
-	g++	Test1.cpp	Model.o	-o	Test1
+Test1_Model:	Test1.cpp	Model.o
+	g++	Test1.cpp	Model.o	-o	Test1_Model
 
-Model.o:	Model.cpp
+Model.o:	Model.cpp	Model.h
 	g++	Model.cpp	-c
-
-clean:	rm*.o
-
-clobber:	rm	Test1

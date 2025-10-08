@@ -64,3 +64,35 @@ void Option::setCode(const char*c)
 	strcpy(code,c);
 }
 
+/***********************getters**********************/
+
+const char*Option::getCode()const
+{
+	return code;
+}
+
+const char* Option::getLabel()const
+{
+	return label;
+}
+
+float Option::getPrice()const
+{
+	return price;
+}
+
+
+/**********************Méthode d'instance*************************/
+
+void Option::display()const
+{
+	cout::"Option: ";
+	if(label)
+	{
+		cout<<label;
+	}
+	else
+	{
+		cout<<"pas de label";
+	}
+};
