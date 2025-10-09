@@ -5,36 +5,40 @@
 #define CAR_H
 
 
-#include <cstring>
+#include <string>
 using namespace std;   //permet d'utiliser cout directement et non stdout
 #include <iostream>
 #include "Model.h"
-#include <string>
-
+#include "Option.h"
+using namespace std;
 
 
 class Car
 {
 	private:
-		char*name;
+		string name;
 		Model model;
 
 
 	public:
 		Car(); //constructeur
 
-		Car(const char*);  //constructeur d'initialisation
+		Car(const string& n);  //constructeur d'initialisation
 		Car(const Car& c);  //constructeur de copie
 
 		~Car(); //destructeur
 
-		void setName(const char*n);
+		void setName(const string& n);
 		void setModel(Model m);
 
-		const char* getName() const;
+		string getName() const;
 		Model getModel()const;
 
+
+		//Méthode
 		void display()	const;
 };
+
+
 
 #endif

@@ -2,27 +2,32 @@
 
 
 #include "car.h"
+#include "Option.h"
+#include <iostream>
+#include <cstring>
+#include "Model.h"
+using namespace std;
 
 /**************constructeur******************/
 
 Car::Car()
 {
 	cout<<"Car: constructeur pas defaut"<<endl;
-	name=NULL;
+	name="nullptr";
 	setName("nom");
 };
 
-Car::Car(const char*n)
+Car::Car(const string& n)
 {
 	cout<<"Car: constructeur d'initialisation"<<endl;
-	name=NULL;  //mettre pointeur à null pour ne pas supprimer un element en mémoire
+	name="nullptr";  //mettre pointeur à null pour ne pas supprimer un element en mémoire
 	setName(n);
 }
 
 Car::Car(const Car &v)
 {
 	cout<<"Car: constructeur de copie"<<endl;
-	name=NULL;
+	name="nullptr";
 	setName(v.getName());
 }
 
@@ -40,7 +45,7 @@ Car::~Car()
 
 //*****************Setters
 
-void Car::setName(const char*n)
+void Car::setName(const string& n)
 {
 	if(n==NULL)
 	{
@@ -68,7 +73,7 @@ void Model::setModel(Model m)
 /*********************************getters***********************************/
 
 
-const char* Car::getName() const
+const string Car::getName() const
 {
 	return name;
 }
@@ -83,7 +88,7 @@ Model Car::getModel()const
 
 void Car::display()const
 {
-	cout::"Car: ";
+	cout<<"Car: ";
 	if(name)
 	{
 		cout<<name;

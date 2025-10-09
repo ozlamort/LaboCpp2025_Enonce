@@ -2,6 +2,8 @@
 
 
 #include <Option.h>
+#include <iostream>
+using namespace std;
 
 /******************constructeur***********************/
 
