@@ -9,7 +9,7 @@
 using namespace std;   //permet d'utiliser cout directement et non stdout
 #include <iostream>
 #include "Model.h"
-#include "Option.h"
+//#include "Option.h"
 using namespace std;
 
 
@@ -24,7 +24,7 @@ class Car
 		Car(); //constructeur
 
 		Car(const string& n);  //constructeur d'initialisation
-		Car(const Car& c);  //constructeur de copie
+		Car& operator=(const Car& c);  //constructeur de copie
 
 		~Car(); //destructeur
 
