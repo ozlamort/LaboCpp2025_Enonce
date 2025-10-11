@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Model.h"
-#include "Car.h"
-using namespace carconfig;
+#include "car.h"
+//using namespace carconfig;
 
 // Tests de base de la classe Car (sans les options)
 
@@ -52,5 +52,3 @@ int main()
 
   return 0;
 }
-
-

@@ -15,7 +15,7 @@ Car::Car()  //constructeur
 	cout<<"Car: constructeur pas defaut"<<endl;
 	name="nullptr";
 	setName("nom");
-};
+}
 
 Car::Car(const string& n)  //constructeur d'initialisation
 {
@@ -28,7 +28,7 @@ Car::Car(const Car& c)  //constructeur de copie
 {
 	cout<<"Car: constructeur de copie"<<endl;
 	name="nullptr";
-	setName(v.getName());
+	setName(c.getName());
 }
 
 //**********************DESTRUCTEUR
@@ -36,11 +36,11 @@ Car::Car(const Car& c)  //constructeur de copie
 Car::~Car()
 {
 	cout<<"Car: destructeur"<<endl;
-	if(name)
+	/*if(!name.empty())
 	{
 		delete name; //suppression de 'name' car tableau de caractère []
-	}
-};
+	}*/
+}
 
 
 //*****************Setters
@@ -50,7 +50,7 @@ void Car::setName(const string& n)
 	name =n;
 }
 
-void Model::setModel(Model m)
+void Car::setModel(Model m)
 {
 	model=m;
 }
@@ -76,7 +76,7 @@ Model Car::getModel()const
 void Car::display()const
 {
 	cout<<"Car: ";
-	if(name)
+	if(!name.empty())
 	{
 		cout<<name;
 	}
@@ -84,4 +84,4 @@ void Car::display()const
 	{
 		cout<<"pas de nom";
 	}
-};
+}

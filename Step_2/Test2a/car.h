@@ -24,7 +24,7 @@ class Car
 		Car(); //constructeur
 
 		Car(const string& n);  //constructeur d'initialisation
-		Car& operator=(const Car& c);  //constructeur de copie
+		Car(const Car& c);  //constructeur de copie
 
 		~Car(); //destructeur
 

@@ -50,7 +50,7 @@ Model::~Model()
   {
     delete[] name;  //suppression de 'name' car tableau de caractère []
   }
-};
+}
 
 
 //*************************Setters
